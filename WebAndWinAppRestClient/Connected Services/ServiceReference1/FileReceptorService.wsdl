@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="fys.integrationFord.service" xmlns:tns="fys.integrationFord.service" targetNamespace="fys.integrationFord.service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="fys.integrationFord.service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="ingresarFacturaRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ingresarFactura" type="tns:ingresarFacturaType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ingresarFacturaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="tns:statusType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ingresarFacturaType">
+        <xs:sequence>
+          <xs:element name="dealerID">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="10" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="leadID">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="formaPago">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="tipoFactura">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="nombre">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="apellido">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="documento">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="modelo">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="version">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="color">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="vin">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="fechaFactura" type="xs:date" />
+          <xs:element name="moneda">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="valorFacturaSinImpuestos">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="valorFacturaConImpuestos">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="numeroFactura">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:minLength value="5" />
+                <xs:maxLength value="240" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="statusType">
+        <xs:sequence>
+          <xs:element name="codigo" type="xs:string" />
+          <xs:element name="descripcion" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ingresarFacturaResponse">
+    <wsdl:part name="ingresarFacturaResponse" element="tns:ingresarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ingresarFacturaRequest">
+    <wsdl:part name="ingresarFacturaRequest" element="tns:ingresarFacturaRequest" />
+  </wsdl:message>
+  <wsdl:portType name="FileReceptorServicePort">
+    <wsdl:operation name="ingresarFactura">
+      <wsdl:input name="ingresarFacturaRequest" message="tns:ingresarFacturaRequest" />
+      <wsdl:output name="ingresarFacturaResponse" message="tns:ingresarFacturaResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FileReceptorServicePortSoap11" type="tns:FileReceptorServicePort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ingresarFactura">
+      <soap:operation soapAction="" />
+      <wsdl:input name="ingresarFacturaRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ingresarFacturaResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileReceptorServicePortService">
+    <wsdl:port name="FileReceptorServicePortSoap11" binding="tns:FileReceptorServicePortSoap11">
+      <soap:address location="http://ec2-3-23-113-248.us-east-2.compute.amazonaws.com:8080/ws/FileReceptorService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
