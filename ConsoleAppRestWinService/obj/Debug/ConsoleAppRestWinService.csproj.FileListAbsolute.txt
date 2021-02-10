@@ -1,0 +1,12 @@
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\bin\Debug\ConsoleAppRestWinService.exe.config
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\bin\Debug\ConsoleAppRestWinService.exe
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\bin\Debug\ConsoleAppRestWinService.pdb
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\bin\Debug\RestSharp.dll
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\bin\Debug\Topshelf.dll
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\bin\Debug\RestSharp.xml
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\bin\Debug\Topshelf.xml
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\obj\Debug\ConsoleAppRestWinService.csprojAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\obj\Debug\ConsoleAppRestWinService.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\obj\Debug\ConsoleAppRestWinService.csproj.CopyComplete
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\obj\Debug\ConsoleAppRestWinService.exe
+C:\Users\Usuario\Source\Repos\ConsoleAppRestWinService\obj\Debug\ConsoleAppRestWinService.pdb
